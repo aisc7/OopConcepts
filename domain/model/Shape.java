@@ -1,6 +1,7 @@
 package domain.model;
 
-public class Shape {
+public abstract class Shape {
+    public abstract int getarea();
     private int x = 0;
     public int y = 0;
 
@@ -44,4 +45,5 @@ public class Shape {
     public int getY() {
         return y;
     }
+
 }

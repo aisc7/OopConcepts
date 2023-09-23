@@ -1,6 +1,10 @@
 package domain.model;
 
-public class Circle extends Shape {
+public abstract class Circle extends Shape {
+    @Override
+    public int getarea() {
+        return (int) getArea();
+    }
     private int radius = 0;
 
     public Circle(int newRadius) {

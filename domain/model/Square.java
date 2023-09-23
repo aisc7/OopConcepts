@@ -1,6 +1,10 @@
 package domain.model;
 
 public class Square extends Shape {
+    @Override
+    public int getarea() {
+        return getWidth()*getHeight();
+    }
     private int Width=0;
     public int getWidth() {
         return Width;
