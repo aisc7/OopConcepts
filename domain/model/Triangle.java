@@ -33,6 +33,7 @@ public class Triangle extends Shape {
     }
 
     public int getSideSize2() {
+        
         return this.sideSize2;
     }
 

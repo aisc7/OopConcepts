@@ -1,13 +1,19 @@
 package ui;
+import domain.model.*;
 
-import domain.model.Rect;
-
-public class Test{
-
+public class Test {
     public static void main(String[] args) {
-    var  Rect = new Rect();
-    Rect.setWidth(65);
-    System.out.println("Width: " + Rect.getWidth());
-       System.out.println("Height: " + Rect.getWidth());
+       var shape = new Shape[] {
+            
+                new Square(15),
+                new Rect(10, 20),
+                new Square(10)
+            };
+
+         var sumArea = 0;
+
+         for (Shape shape2 : shape) {
+            sumArea = sumArea + shape2.getarea();
+         }
     }
 }

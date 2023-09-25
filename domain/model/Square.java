@@ -1,24 +1,41 @@
 package domain.model;
 
 public class Square extends Shape {
-    @Override
-    public int getarea() {
-        return getWidth()*getHeight();
+    private int width;
+
+    public Square(int newX, int newY, int newWidth) {
+        super(newX, newY);
+        setWidth(newWidth);
     }
-    private int Width=0;
-    public int getWidth() {
-        return Width;
+
+    public Square(int newWidth) {
+        this(0, 0, newWidth);
     }
-    public void setWidth(int newWidth) {
-        if (newWidth >=0) {
-            Width=newWidth;
-        }
-    }
+   public int getarea() {
+        return width * width;
     
+    }
+    public int getperimeter() {
+        return width * 4;
+    
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) throws IllegalArgumentException {
+        if (width < 0)
+            throw new IllegalArgumentException("Side cannot be negative");
+        this.width = width;
+    }
+
     public int getHeight() {
         return getWidth();
     }
-    public void setHeight(int newHeight) {
-        setWidth(newHeight);
+
+    public void setHeight(int width) {
+        setWidth(width);
     }
+
 }
